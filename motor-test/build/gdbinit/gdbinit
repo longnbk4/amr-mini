@@ -1,0 +1,2 @@
+source /home/longnb/esp32test/build/gdbinit/symbols
+source /home/longnb/esp32test/build/gdbinit/connect

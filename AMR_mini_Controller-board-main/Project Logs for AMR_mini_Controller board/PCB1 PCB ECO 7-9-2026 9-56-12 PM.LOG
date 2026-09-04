@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=5V_PI Pin=PI4-1
+Removed Pin From Net: NetName=5V_PI Pin=PI4-2
+Removed Pin From Net: NetName=GND Pin=R1-2
+Removed Member From Class: ClassName=Sheet1 Member=R1
+Change Component Footprint: Designator=MOTOR L Old Footprint=FP-B6B-PH-SM4-TBT_LF_SN-MFG New Footprint=FP-B6B-PH-SM4-TBT_LF_SN-MFG
+Change Component Footprint: Designator=MOTOR R Old Footprint=FP-B6B-PH-SM4-TBT_LF_SN-MFG New Footprint=FP-B6B-PH-SM4-TBT_LF_SN-MFG
+Change Component Footprint: Designator=PI4 Old Footprint=FP-B6B-PH-SM4-TBT_LF_SN-MFG New Footprint=FP-B6B-PH-SM4-TBT_LF_SN-MFG
+Change Component Footprint: Designator=SW_POWER Old Footprint=FP-B6B-PH-SM4-TBT_LF_SN-MFG New Footprint=FP-B6B-PH-SM4-TBT_LF_SN-MFG
+Added Pin To Net: NetName=5V_PI Pin=PI4-4
+Added Pin To Net: NetName=GND Pin=PI4-5
+Added Pin To Net: NetName=GND Pin=PI4-6
+Added Pin To Net: NetName=GND Pin=PS2-OUT-
+Added Pin To Net: NetName=UART_RX Pin=PI4-2
+Added Net: Name=UART_RX
+Added Pin To Net: NetName=UART_TX Pin=PI4-1
+Added Net: Name=UART_TX

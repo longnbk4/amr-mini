@@ -1,0 +1,11 @@
+Command: cmake -G Ninja -B /home/longnb/esp32test/build -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/home/longnb/.espressif/tools/python/v6.0.1/venv/bin/python -DESP_PLATFORM=1 -DCCACHE_ENABLE=False /home/longnb/esp32test
+Loading defaults file /home/longnb/esp32test/sdkconfig.defaults...
+Loading defaults file /home/longnb/esp32test/sdkconfig.defaults.esp32s3...
+Configuration Report               
+ ───────────────────────────────── 
+   Parser Version: 1               
+   Verbosity: default              
+   Defaults policy: sdkconfig      
+   Status: Finished successfully   
+                                   
+ ───────────────────────────────── 

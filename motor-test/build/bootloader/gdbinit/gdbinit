@@ -1,0 +1,2 @@
+source /home/longnb/esp32test/build/bootloader/gdbinit/symbols
+source /home/longnb/esp32test/build/bootloader/gdbinit/connect

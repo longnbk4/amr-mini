@@ -1,0 +1,5 @@
+Change Component Designator: OldDesignator=J1 NewDesignator=DC_12V
+Change Component Designator: OldDesignator=PW1 NewDesignator=ENA
+Change Component Designator: OldDesignator=PW2 NewDesignator=ENB
+Change Net Name : Old Net Name=NetPW1_1 New Net Name=NetENA_1
+Change Net Name : Old Net Name=NetPW2_1 New Net Name=NetENB_1

@@ -1,0 +1,6 @@
+"-specs=/home/longnb/esp32test/build/bootloader/specs/picolibc.specs"
+-mlongcalls
+-fno-builtin-memcpy
+-fno-builtin-memset
+-fno-builtin-bzero
+-fno-rtti

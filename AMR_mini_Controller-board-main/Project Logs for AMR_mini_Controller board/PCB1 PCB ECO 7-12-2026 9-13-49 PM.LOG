@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=5V_MCU Pin=R3-2
+Removed Member From Class: ClassName=Sheet1 Member=R3
+Added Pin To Net: NetName=5V_MCU Pin=C4-2
+Added Pin To Net: NetName=5V_MCU Pin=U2-9
