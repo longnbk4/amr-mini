@@ -1,0 +1,587 @@
+Command: ninja all
+[0/1] Re-running CMake...
+-- Component directory /home/longnb/.espressif/v6.0.1/esp-idf/components/mqtt does not contain a CMakeLists.txt file. No component will be added
+-- Minimal build - ON
+-- git rev-parse returned 'fatal: not a git repository (or any of the parent directories): .git'
+-- Could not use 'git describe' to determine PROJECT_VER.
+-- Building ESP-IDF components for target esp32s3
+NOTICE: Processing 2 dependencies:
+NOTICE: [1/2] espressif/led_strip (3.0.3)
+NOTICE: [2/2] idf (6.0.1)
+-- ESP-TEE is currently supported only on the esp32c6;esp32h2;esp32c5;esp32c61 SoCs
+-- KCONFIG_REPORT_VERBOSITY not set, using default
+-- Project sdkconfig file /home/longnb/esp32test/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- App "blink" version: 1
+-- Setting up mbedtls configuration
+-- Linkage type is PUBLIC
+-- Adding linker script /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_wdt/esp32s3/rom.wdt.ld
+-- Adding linker script /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_system/ld/esp32s3/memory.ld.in
+--   -> Preprocessing .in script: /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_system/ld/esp32s3/memory.ld.in
+-- Adding linker script /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_system/ld/esp32s3/sections.ld.in
+--   -> Preprocessing .in script: /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_system/ld/esp32s3/sections.ld.in
+--   -> Applying ldgen processing: /home/longnb/esp32test/build/esp-idf/esp_system/ld/sections.ld.in
+-- Adding linker script /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ld
+-- Adding linker script /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.api.ld
+-- Adding linker script /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.bt_funcs.ld
+-- Adding linker script /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libgcc.ld
+-- Adding linker script /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.version.ld
+-- Adding linker script /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_master.ld
+-- Adding linker script /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_50.ld
+-- Adding linker script /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_smp.ld
+-- Adding linker script /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_dtm.ld
+-- Adding linker script /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_test.ld
+-- Adding linker script /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.ble_scan.ld
+-- Adding linker script /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_rom/esp32s3/ld/esp32s3.rom.libc.ld
+-- Adding linker script /home/longnb/.espressif/v6.0.1/esp-idf/components/soc/esp32s3/ld/esp32s3.peripherals.ld
+-- Components: app_update bootloader bootloader_support cxx efuse esp_app_format esp_blockdev esp_bootloader_format esp_coex esp_common esp_driver_bitscrambler esp_driver_dma esp_driver_gpio esp_driver_ledc esp_driver_rmt esp_driver_spi esp_driver_uart esp_driver_usb_serial_jtag esp_event esp_hal_ana_conv esp_hal_clock esp_hal_dma esp_hal_gpio esp_hal_gpspi esp_hal_i2s esp_hal_ledc esp_hal_mspi esp_hal_pmu esp_hal_rmt esp_hal_rtc_timer esp_hal_security esp_hal_timg esp_hal_touch_sens esp_hal_uart esp_hal_usb esp_hal_wdt esp_http_server esp_hw_support esp_libc esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_security esp_stdio esp_system esp_timer esp_usb_cdc_rom_console esp_wifi espressif__led_strip esptool_py freertos hal heap http_parser log lwip main mbedtls nvs_flash nvs_sec_provider partition_table pthread soc spi_flash vfs wpa_supplicant xtensa
+-- Component paths: /home/longnb/.espressif/v6.0.1/esp-idf/components/app_update /home/longnb/.espressif/v6.0.1/esp-idf/components/bootloader /home/longnb/.espressif/v6.0.1/esp-idf/components/bootloader_support /home/longnb/.espressif/v6.0.1/esp-idf/components/cxx /home/longnb/.espressif/v6.0.1/esp-idf/components/efuse /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_app_format /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_blockdev /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_bootloader_format /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_coex /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_common /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_driver_bitscrambler /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_driver_dma /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_driver_gpio /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_driver_ledc /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_driver_rmt /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_driver_spi /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_driver_uart /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_driver_usb_serial_jtag /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_event /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_ana_conv /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_clock /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_dma /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_gpio /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_gpspi /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_i2s /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_ledc /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_mspi /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_pmu /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_rmt /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_rtc_timer /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_security /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_timg /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_touch_sens /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_uart /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_usb /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_wdt /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_http_server /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hw_support /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_libc /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_mm /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_netif /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_netif_stack /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_partition /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_phy /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_pm /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_psram /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_ringbuf /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_rom /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_security /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_stdio /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_system /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_timer /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_usb_cdc_rom_console /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_wifi /home/longnb/esp32test/managed_components/espressif__led_strip /home/longnb/.espressif/v6.0.1/esp-idf/components/esptool_py /home/longnb/.espressif/v6.0.1/esp-idf/components/freertos /home/longnb/.espressif/v6.0.1/esp-idf/components/hal /home/longnb/.espressif/v6.0.1/esp-idf/components/heap /home/longnb/.espressif/v6.0.1/esp-idf/components/http_parser /home/longnb/.espressif/v6.0.1/esp-idf/components/log /home/longnb/.espressif/v6.0.1/esp-idf/components/lwip /home/longnb/esp32test/main /home/longnb/.espressif/v6.0.1/esp-idf/components/mbedtls /home/longnb/.espressif/v6.0.1/esp-idf/components/nvs_flash /home/longnb/.espressif/v6.0.1/esp-idf/components/nvs_sec_provider /home/longnb/.espressif/v6.0.1/esp-idf/components/partition_table /home/longnb/.espressif/v6.0.1/esp-idf/components/pthread /home/longnb/.espressif/v6.0.1/esp-idf/components/soc /home/longnb/.espressif/v6.0.1/esp-idf/components/spi_flash /home/longnb/.espressif/v6.0.1/esp-idf/components/vfs /home/longnb/.espressif/v6.0.1/esp-idf/components/wpa_supplicant /home/longnb/.espressif/v6.0.1/esp-idf/components/xtensa
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/longnb/esp32test/build
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/longnb/esp32test/build/bootloader && /home/longnb/.espressif/tools/python/v6.0.1/venv/bin/python /home/longnb/.espressif/v6.0.1/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /home/longnb/esp32test/build/bootloader/bootloader.bin
+Bootloader binary size 0x5240 bytes. 0x2dc0 bytes (36%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj 
+/home/longnb/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc -DESP_PLATFORM -DIDF_VER=\"v6.0.1-dirty\" -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -I/home/longnb/esp32test/build/config -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_libc/platform_include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/freertos/config/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/freertos/config/include/freertos -I/home/longnb/.espressif/v6.0.1/esp-idf/components/freertos/config/xtensa/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/freertos/FreeRTOS-Kernel/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -I/home/longnb/.espressif/v6.0.1/esp-idf/components/freertos/esp_additions/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hw_support/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hw_support/include/soc -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hw_support/ldo/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hw_support/debug_probe/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hw_support/etm/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hw_support/mspi_timing_tuning/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hw_support/power_supply/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hw_support/modem/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hw_support/include/soc/esp32s3 -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hw_support/port/esp32s3/. -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hw_support/port/esp32s3/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/. -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/heap/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/heap/tlsf -I/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/soc/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/soc/esp32s3 -I/home/longnb/.espressif/v6.0.1/esp-idf/components/soc/esp32s3/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/soc/esp32s3/register -I/home/longnb/.espressif/v6.0.1/esp-idf/components/hal/platform_port/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/hal/esp32s3/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/hal/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_rom/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_rom/esp32s3/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_rom/esp32s3/include/esp32s3 -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_rom/esp32s3 -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_common/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_system/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_system/port/soc -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_system/port/include/private -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_stdio/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/xtensa/esp32s3/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/xtensa/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/xtensa/deprecated_include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_gpio/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_gpio/esp32s3/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_usb/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_usb/esp32s3/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_pmu/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_pmu/esp32s3/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_ana_conv/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_ana_conv/esp32s3/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_dma/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_dma/esp32s3/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/lwip/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/lwip/include/apps -I/home/longnb/.espressif/v6.0.1/esp-idf/components/lwip/lwip/src/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/lwip/port/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/lwip/port/freertos/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/lwip/port/esp32xx/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/lwip/port/esp32xx/include/arch -I/home/longnb/.espressif/v6.0.1/esp-idf/components/lwip/port/esp32xx/include/sys -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_wifi/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_wifi/include/local -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_wifi/wifi_apps/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_wifi/wifi_apps/nan_app/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_event/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_phy/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_phy/esp32s3/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_netif/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_http_server/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/http_parser -I/home/longnb/.espressif/v6.0.1/esp-idf/components/nvs_flash/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_partition/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_blockdev/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_driver_gpio/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_driver_ledc/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_ledc/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_ledc/esp32s3/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_driver_uart/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_uart/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_uart/esp32s3/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/vfs/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_timer/include -I/home/longnb/esp32test/managed_components/espressif__led_strip/include -I/home/longnb/esp32test/managed_components/espressif__led_strip/interface -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_driver_rmt/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_rmt/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_rmt/esp32s3/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_driver_spi/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_pm/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_gpspi/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_hal_gpspi/esp32s3/include -I/home/longnb/.espressif/v6.0.1/esp-idf/components/esp_driver_dma/include @"/home/longnb/esp32test/build/toolchain/cflags" -ffunction-sections -fdata-sections -Wall -Werror -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -Og -fno-shrink-wrap -fmacro-prefix-map=/home/longnb/esp32test=. -fmacro-prefix-map=/home/longnb/.espressif/v6.0.1/esp-idf=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu23 -Wno-old-style-declaration -fzero-init-padding-bits=all -fno-malloc-dce -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -MF esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj -c /home/longnb/esp32test/main/main.c
+/home/longnb/esp32test/main/main.c:85:3: error: conflicting types for 'pid_t'; have 'struct <anonymous>'
+   85 | } pid_t;
+      |   ^~~~~
+In file included from /home/longnb/.espressif/v6.0.1/esp-idf/components/http_parser/http_parser.h:32,
+                 from /home/longnb/.espressif/v6.0.1/esp-idf/components/esp_http_server/include/esp_http_server.h:14,
+                 from /home/longnb/esp32test/main/main.c:49:
+/home/longnb/.espressif/tools/xtensa-esp-elf/esp-15.2.0_20251204/xtensa-esp-elf/picolibc/include/sys/types.h:202:25: note: previous declaration of 'pid_t' with type 'pid_t' {aka 'int'}
+  202 | typedef __pid_t         pid_t;          /* process id */
+      |                         ^~~~~
+/home/longnb/esp32test/main/main.c:87:28: error: field name not in record or union initializer
+   87 | static pid_t pid_left  = { .kp = 0, .ki = 0, .kd = 0, .integral = 0, .prev_error = 0 };
+      |                            ^
+/home/longnb/esp32test/main/main.c:87:28: note: (near initialization for 'pid_left')
+/home/longnb/esp32test/main/main.c:87:37: error: field name not in record or union initializer
+   87 | static pid_t pid_left  = { .kp = 0, .ki = 0, .kd = 0, .integral = 0, .prev_error = 0 };
+      |                                     ^
+/home/longnb/esp32test/main/main.c:87:37: note: (near initialization for 'pid_left')
+/home/longnb/esp32test/main/main.c:87:43: error: excess elements in scalar initializer [-Werror]
+   87 | static pid_t pid_left  = { .kp = 0, .ki = 0, .kd = 0, .integral = 0, .prev_error = 0 };
+      |                                           ^
+/home/longnb/esp32test/main/main.c:87:43: note: (near initialization for 'pid_left')
+/home/longnb/esp32test/main/main.c:87:46: error: field name not in record or union initializer
+   87 | static pid_t pid_left  = { .kp = 0, .ki = 0, .kd = 0, .integral = 0, .prev_error = 0 };
+      |                                              ^
+/home/longnb/esp32test/main/main.c:87:46: note: (near initialization for 'pid_left')
+/home/longnb/esp32test/main/main.c:87:52: error: excess elements in scalar initializer [-Werror]
+   87 | static pid_t pid_left  = { .kp = 0, .ki = 0, .kd = 0, .integral = 0, .prev_error = 0 };
+      |                                                    ^
+/home/longnb/esp32test/main/main.c:87:52: note: (near initialization for 'pid_left')
+/home/longnb/esp32test/main/main.c:87:55: error: field name not in record or union initializer
+   87 | static pid_t pid_left  = { .kp = 0, .ki = 0, .kd = 0, .integral = 0, .prev_error = 0 };
+      |                                                       ^
+/home/longnb/esp32test/main/main.c:87:55: note: (near initialization for 'pid_left')
+/home/longnb/esp32test/main/main.c:87:67: error: excess elements in scalar initializer [-Werror]
+   87 | static pid_t pid_left  = { .kp = 0, .ki = 0, .kd = 0, .integral = 0, .prev_error = 0 };
+      |                                                                   ^
+/home/longnb/esp32test/main/main.c:87:67: note: (near initialization for 'pid_left')
+/home/longnb/esp32test/main/main.c:87:70: error: field name not in record or union initializer
+   87 | static pid_t pid_left  = { .kp = 0, .ki = 0, .kd = 0, .integral = 0, .prev_error = 0 };
+      |                                                                      ^
+/home/longnb/esp32test/main/main.c:87:70: note: (near initialization for 'pid_left')
+/home/longnb/esp32test/main/main.c:87:84: error: excess elements in scalar initializer [-Werror]
+   87 | static pid_t pid_left  = { .kp = 0, .ki = 0, .kd = 0, .integral = 0, .prev_error = 0 };
+      |                                                                                    ^
+/home/longnb/esp32test/main/main.c:87:84: note: (near initialization for 'pid_left')
+/home/longnb/esp32test/main/main.c:88:28: error: field name not in record or union initializer
+   88 | static pid_t pid_right = { .kp = 0, .ki = 0, .kd = 0, .integral = 0, .prev_error = 0 };
+      |                            ^
+/home/longnb/esp32test/main/main.c:88:28: note: (near initialization for 'pid_right')
+/home/longnb/esp32test/main/main.c:88:37: error: field name not in record or union initializer
+   88 | static pid_t pid_right = { .kp = 0, .ki = 0, .kd = 0, .integral = 0, .prev_error = 0 };
+      |                                     ^
+/home/longnb/esp32test/main/main.c:88:37: note: (near initialization for 'pid_right')
+/home/longnb/esp32test/main/main.c:88:43: error: excess elements in scalar initializer [-Werror]
+   88 | static pid_t pid_right = { .kp = 0, .ki = 0, .kd = 0, .integral = 0, .prev_error = 0 };
+      |                                           ^
+/home/longnb/esp32test/main/main.c:88:43: note: (near initialization for 'pid_right')
+/home/longnb/esp32test/main/main.c:88:46: error: field name not in record or union initializer
+   88 | static pid_t pid_right = { .kp = 0, .ki = 0, .kd = 0, .integral = 0, .prev_error = 0 };
+      |                                              ^
+/home/longnb/esp32test/main/main.c:88:46: note: (near initialization for 'pid_right')
+/home/longnb/esp32test/main/main.c:88:52: error: excess elements in scalar initializer [-Werror]
+   88 | static pid_t pid_right = { .kp = 0, .ki = 0, .kd = 0, .integral = 0, .prev_error = 0 };
+      |                                                    ^
+/home/longnb/esp32test/main/main.c:88:52: note: (near initialization for 'pid_right')
+/home/longnb/esp32test/main/main.c:88:55: error: field name not in record or union initializer
+   88 | static pid_t pid_right = { .kp = 0, .ki = 0, .kd = 0, .integral = 0, .prev_error = 0 };
+      |                                                       ^
+/home/longnb/esp32test/main/main.c:88:55: note: (near initialization for 'pid_right')
+/home/longnb/esp32test/main/main.c:88:67: error: excess elements in scalar initializer [-Werror]
+   88 | static pid_t pid_right = { .kp = 0, .ki = 0, .kd = 0, .integral = 0, .prev_error = 0 };
+      |                                                                   ^
+/home/longnb/esp32test/main/main.c:88:67: note: (near initialization for 'pid_right')
+/home/longnb/esp32test/main/main.c:88:70: error: field name not in record or union initializer
+   88 | static pid_t pid_right = { .kp = 0, .ki = 0, .kd = 0, .integral = 0, .prev_error = 0 };
+      |                                                                      ^
+/home/longnb/esp32test/main/main.c:88:70: note: (near initialization for 'pid_right')
+/home/longnb/esp32test/main/main.c:88:84: error: excess elements in scalar initializer [-Werror]
+   88 | static pid_t pid_right = { .kp = 0, .ki = 0, .kd = 0, .integral = 0, .prev_error = 0 };
+      |                                                                                    ^
+/home/longnb/esp32test/main/main.c:88:84: note: (near initialization for 'pid_right')
+/home/longnb/esp32test/main/main.c: In function 'pid_reset':
+/home/longnb/esp32test/main/main.c:114:6: error: request for member 'integral' in something not a structure or union
+  114 |     p->integral = 0;
+      |      ^~
+/home/longnb/esp32test/main/main.c:115:6: error: request for member 'prev_error' in something not a structure or union
+  115 |     p->prev_error = 0;
+      |      ^~
+/home/longnb/esp32test/main/main.c: In function 'pid_compute':
+/home/longnb/esp32test/main/main.c:121:6: error: request for member 'integral' in something not a structure or union
+  121 |     p->integral += error * dt;
+      |      ^~
+/home/longnb/esp32test/main/main.c:122:10: error: request for member 'integral' in something not a structure or union
+  122 |     if (p->integral > PID_INTEGRAL_LIMIT)  p->integral = PID_INTEGRAL_LIMIT;
+      |          ^~
+/home/longnb/esp32test/main/main.c:122:45: error: request for member 'integral' in something not a structure or union
+  122 |     if (p->integral > PID_INTEGRAL_LIMIT)  p->integral = PID_INTEGRAL_LIMIT;
+      |                                             ^~
+/home/longnb/esp32test/main/main.c:123:10: error: request for member 'integral' in something not a structure or union
+  123 |     if (p->integral < -PID_INTEGRAL_LIMIT) p->integral = -PID_INTEGRAL_LIMIT;
+      |          ^~
+/home/longnb/esp32test/main/main.c:123:45: error: request for member 'integral' in something not a structure or union
+  123 |     if (p->integral < -PID_INTEGRAL_LIMIT) p->integral = -PID_INTEGRAL_LIMIT;
+      |                                             ^~
+/home/longnb/esp32test/main/main.c:125:34: error: request for member 'prev_error' in something not a structure or union
+  125 |     float derivative = (error - p->prev_error) / dt;
+      |                                  ^~
+/home/longnb/esp32test/main/main.c:126:6: error: request for member 'prev_error' in something not a structure or union
+  126 |     p->prev_error = error;
+      |      ^~
+/home/longnb/esp32test/main/main.c:128:21: error: request for member 'kp' in something not a structure or union
+  128 |     float output = p->kp * error + p->ki * p->integral + p->kd * derivative;
+      |                     ^~
+/home/longnb/esp32test/main/main.c:128:37: error: request for member 'ki' in something not a structure or union
+  128 |     float output = p->kp * error + p->ki * p->integral + p->kd * derivative;
+      |                                     ^~
+/home/longnb/esp32test/main/main.c:128:45: error: request for member 'integral' in something not a structure or union
+  128 |     float output = p->kp * error + p->ki * p->integral + p->kd * derivative;
+      |                                             ^~
+/home/longnb/esp32test/main/main.c:128:59: error: request for member 'kd' in something not a structure or union
+  128 |     float output = p->kp * error + p->ki * p->integral + p->kd * derivative;
+      |                                                           ^~
+/home/longnb/esp32test/main/main.c: At top level:
+/home/longnb/esp32test/main/main.c:333:15: error: trigraph '??'' ignored, use '-trigraphs' to enable [-Werror=trigraphs]
+  333 | "  csv+=`${l.t??''},${l.sp??''},${l.meas??''},${l.out??''},${r.sp??''},${r.meas??''},${r.out??''}\\n`;"
+/home/longnb/esp32test/main/main.c:333:27: error: trigraph '??'' ignored, use '-trigraphs' to enable [-Werror=trigraphs]
+/home/longnb/esp32test/main/main.c:333:41: error: trigraph '??'' ignored, use '-trigraphs' to enable [-Werror=trigraphs]
+/home/longnb/esp32test/main/main.c:333:54: error: trigraph '??'' ignored, use '-trigraphs' to enable [-Werror=trigraphs]
+/home/longnb/esp32test/main/main.c:333:66: error: trigraph '??'' ignored, use '-trigraphs' to enable [-Werror=trigraphs]
+/home/longnb/esp32test/main/main.c:333:80: error: trigraph '??'' ignored, use '-trigraphs' to enable [-Werror=trigraphs]
+/home/longnb/esp32test/main/main.c:333:93: error: trigraph '??'' ignored, use '-trigraphs' to enable [-Werror=trigraphs]
+/home/longnb/esp32test/main/main.c: In function 'pid_set_handler':
+/home/longnb/esp32test/main/main.c:393:33: error: request for member 'kp' in something not a structure or union
+  393 |             if (has_kp) pid_left.kp = kp;
+      |                                 ^
+/home/longnb/esp32test/main/main.c:394:33: error: request for member 'ki' in something not a structure or union
+  394 |             if (has_ki) pid_left.ki = ki;
+      |                                 ^
+/home/longnb/esp32test/main/main.c:395:33: error: request for member 'kd' in something not a structure or union
+  395 |             if (has_kd) pid_left.kd = kd;
+      |                                 ^
+In file included from /home/longnb/esp32test/main/main.c:45:
+/home/longnb/esp32test/main/main.c:397:74: error: request for member 'kp' in something not a structure or union
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |                                                                          ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:220:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  220 |         if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_ERROR)        { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_ERROR),   tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:397:13: note: in expansion of macro 'ESP_LOGI'
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:397:87: error: request for member 'ki' in something not a structure or union
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |                                                                                       ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:220:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  220 |         if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_ERROR)        { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_ERROR),   tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:397:13: note: in expansion of macro 'ESP_LOGI'
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:397:100: error: request for member 'kd' in something not a structure or union
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |                                                                                                    ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:220:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  220 |         if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_ERROR)        { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_ERROR),   tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:397:13: note: in expansion of macro 'ESP_LOGI'
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:397:74: error: request for member 'kp' in something not a structure or union
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |                                                                          ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:221:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  221 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_WARN)    { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_WARN),    tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:397:13: note: in expansion of macro 'ESP_LOGI'
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:397:87: error: request for member 'ki' in something not a structure or union
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |                                                                                       ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:221:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  221 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_WARN)    { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_WARN),    tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:397:13: note: in expansion of macro 'ESP_LOGI'
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:397:100: error: request for member 'kd' in something not a structure or union
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |                                                                                                    ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:221:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  221 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_WARN)    { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_WARN),    tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:397:13: note: in expansion of macro 'ESP_LOGI'
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:397:74: error: request for member 'kp' in something not a structure or union
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |                                                                          ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:222:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  222 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_DEBUG)   { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_DEBUG),   tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:397:13: note: in expansion of macro 'ESP_LOGI'
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:397:87: error: request for member 'ki' in something not a structure or union
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |                                                                                       ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:222:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  222 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_DEBUG)   { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_DEBUG),   tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:397:13: note: in expansion of macro 'ESP_LOGI'
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:397:100: error: request for member 'kd' in something not a structure or union
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |                                                                                                    ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:222:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  222 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_DEBUG)   { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_DEBUG),   tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:397:13: note: in expansion of macro 'ESP_LOGI'
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:397:74: error: request for member 'kp' in something not a structure or union
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |                                                                          ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:223:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  223 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_VERBOSE) { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_VERBOSE), tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:397:13: note: in expansion of macro 'ESP_LOGI'
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:397:87: error: request for member 'ki' in something not a structure or union
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |                                                                                       ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:223:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  223 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_VERBOSE) { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_VERBOSE), tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:397:13: note: in expansion of macro 'ESP_LOGI'
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:397:100: error: request for member 'kd' in something not a structure or union
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |                                                                                                    ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:223:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  223 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_VERBOSE) { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_VERBOSE), tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:397:13: note: in expansion of macro 'ESP_LOGI'
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:397:74: error: request for member 'kp' in something not a structure or union
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |                                                                          ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:224:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  224 |         else                                                  { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_INFO),    tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:397:13: note: in expansion of macro 'ESP_LOGI'
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:397:87: error: request for member 'ki' in something not a structure or union
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |                                                                                       ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:224:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  224 |         else                                                  { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_INFO),    tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:397:13: note: in expansion of macro 'ESP_LOGI'
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:397:100: error: request for member 'kd' in something not a structure or union
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |                                                                                                    ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:224:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  224 |         else                                                  { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_INFO),    tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:397:13: note: in expansion of macro 'ESP_LOGI'
+  397 |             ESP_LOGI(TAG, "LEFT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_left.kp, pid_left.ki, pid_left.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:400:34: error: request for member 'kp' in something not a structure or union
+  400 |             if (has_kp) pid_right.kp = kp;
+      |                                  ^
+/home/longnb/esp32test/main/main.c:401:34: error: request for member 'ki' in something not a structure or union
+  401 |             if (has_ki) pid_right.ki = ki;
+      |                                  ^
+/home/longnb/esp32test/main/main.c:402:34: error: request for member 'kd' in something not a structure or union
+  402 |             if (has_kd) pid_right.kd = kd;
+      |                                  ^
+/home/longnb/esp32test/main/main.c:404:76: error: request for member 'kp' in something not a structure or union
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |                                                                            ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:220:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  220 |         if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_ERROR)        { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_ERROR),   tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:404:13: note: in expansion of macro 'ESP_LOGI'
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:404:90: error: request for member 'ki' in something not a structure or union
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |                                                                                          ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:220:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  220 |         if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_ERROR)        { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_ERROR),   tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:404:13: note: in expansion of macro 'ESP_LOGI'
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:404:104: error: request for member 'kd' in something not a structure or union
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |                                                                                                        ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:220:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  220 |         if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_ERROR)        { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_ERROR),   tag, LOG_FORMAT(E, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:404:13: note: in expansion of macro 'ESP_LOGI'
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:404:76: error: request for member 'kp' in something not a structure or union
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |                                                                            ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:221:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  221 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_WARN)    { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_WARN),    tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:404:13: note: in expansion of macro 'ESP_LOGI'
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:404:90: error: request for member 'ki' in something not a structure or union
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |                                                                                          ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:221:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  221 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_WARN)    { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_WARN),    tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:404:13: note: in expansion of macro 'ESP_LOGI'
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:404:104: error: request for member 'kd' in something not a structure or union
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |                                                                                                        ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:221:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  221 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_WARN)    { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_WARN),    tag, LOG_FORMAT(W, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:404:13: note: in expansion of macro 'ESP_LOGI'
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:404:76: error: request for member 'kp' in something not a structure or union
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |                                                                            ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:222:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  222 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_DEBUG)   { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_DEBUG),   tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:404:13: note: in expansion of macro 'ESP_LOGI'
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:404:90: error: request for member 'ki' in something not a structure or union
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |                                                                                          ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:222:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  222 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_DEBUG)   { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_DEBUG),   tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:404:13: note: in expansion of macro 'ESP_LOGI'
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:404:104: error: request for member 'kd' in something not a structure or union
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |                                                                                                        ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:222:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  222 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_DEBUG)   { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_DEBUG),   tag, LOG_FORMAT(D, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:404:13: note: in expansion of macro 'ESP_LOGI'
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:404:76: error: request for member 'kp' in something not a structure or union
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |                                                                            ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:223:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  223 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_VERBOSE) { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_VERBOSE), tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:404:13: note: in expansion of macro 'ESP_LOGI'
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:404:90: error: request for member 'ki' in something not a structure or union
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |                                                                                          ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:223:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  223 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_VERBOSE) { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_VERBOSE), tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:404:13: note: in expansion of macro 'ESP_LOGI'
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:404:104: error: request for member 'kd' in something not a structure or union
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |                                                                                                        ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:223:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  223 |         else if (ESP_LOG_GET_LEVEL(configs)==ESP_LOG_VERBOSE) { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_VERBOSE), tag, LOG_FORMAT(V, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:404:13: note: in expansion of macro 'ESP_LOGI'
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:404:76: error: request for member 'kp' in something not a structure or union
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |                                                                            ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:224:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  224 |         else                                                  { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_INFO),    tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:404:13: note: in expansion of macro 'ESP_LOGI'
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:404:90: error: request for member 'ki' in something not a structure or union
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |                                                                                          ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:224:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  224 |         else                                                  { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_INFO),    tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:404:13: note: in expansion of macro 'ESP_LOGI'
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c:404:104: error: request for member 'kd' in something not a structure or union
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |                                                                                                        ^
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:224:167: note: in definition of macro 'ESP_LOG_LEVEL'
+  224 |         else                                                  { esp_log(ESP_LOG_CONFIG_INIT(ESP_LOG_INFO),    tag, LOG_FORMAT(I, format), esp_log_timestamp(), tag, ##__VA_ARGS__); } \
+      |                                                                                                                                                                       ^~~~~~~~~~~
+/home/longnb/.espressif/v6.0.1/esp-idf/components/log/include/esp_log.h:127:41: note: in expansion of macro 'ESP_LOG_LEVEL_LOCAL'
+  127 | #define ESP_LOGI(tag, format, ...) do { ESP_LOG_LEVEL_LOCAL(ESP_LOG_INFO, tag, format, ##__VA_ARGS__); } while(0)
+      |                                         ^~~~~~~~~~~~~~~~~~~
+/home/longnb/esp32test/main/main.c:404:13: note: in expansion of macro 'ESP_LOGI'
+  404 |             ESP_LOGI(TAG, "RIGHT PID -> kp=%.4f ki=%.4f kd=%.4f", pid_right.kp, pid_right.ki, pid_right.kd);
+      |             ^~~~~~~~
+/home/longnb/esp32test/main/main.c: In function 'telemetry_get_handler':
+/home/longnb/esp32test/main/main.c:454:17: error: request for member 'kp' in something not a structure or union
+  454 |         pid_left.kp, pid_left.ki, pid_left.kd,
+      |                 ^
+/home/longnb/esp32test/main/main.c:454:30: error: request for member 'ki' in something not a structure or union
+  454 |         pid_left.kp, pid_left.ki, pid_left.kd,
+      |                              ^
+/home/longnb/esp32test/main/main.c:454:43: error: request for member 'kd' in something not a structure or union
+  454 |         pid_left.kp, pid_left.ki, pid_left.kd,
+      |                                           ^
+/home/longnb/esp32test/main/main.c:455:18: error: request for member 'kp' in something not a structure or union
+  455 |         pid_right.kp, pid_right.ki, pid_right.kd);
+      |                  ^
+/home/longnb/esp32test/main/main.c:455:32: error: request for member 'ki' in something not a structure or union
+  455 |         pid_right.kp, pid_right.ki, pid_right.kd);
+      |                                ^
+/home/longnb/esp32test/main/main.c:455:46: error: request for member 'kd' in something not a structure or union
+  455 |         pid_right.kp, pid_right.ki, pid_right.kd);
+      |                                              ^
+cc1: all warnings being treated as errors
+ninja: build stopped: subcommand failed.

@@ -1,0 +1,326 @@
+#!/usr/bin/env python3
+import serial
+import threading
+import sys
+import time
+import re
+import tty
+import termios
+import select
+
+PORT = '/dev/serial0'
+BAUD_RATE = 115200
+
+DEFAULT_SPEED = 180
+MIN_SPEED = 80
+MAX_SPEED = 255
+
+current_cmd = "X"
+status_text = "DỪNG"
+is_running = True
+
+MOVE_KEYS = {
+    'W': 'TIẾN',
+    'S': 'LÙI',
+    'A': 'TRÁI',
+    'D': 'PHẢI',
+}
+
+INITIAL_GRACE = 0.60
+STEADY_TIMEOUT = 0.12
+
+tele = {
+    "rpmL": 0.0, "rpmR": 0.0,
+    "x": 0.0, "y": 0.0, "theta": 0.0,
+    "ticksL": 0, "ticksR": 0,
+}
+tele_lock = threading.Lock()
+serial_lock = threading.Lock()
+
+E_PATTERN = re.compile(
+    r'^E,'
+    r'(-?\d+),'
+    r'(-?\d+),'
+    r'(-?\d+(?:\.\d+)?),'
+    r'(-?\d+(?:\.\d+)?),'
+    r'(-?\d+(?:\.\d+)?),'
+    r'(-?\d+(?:\.\d+)?),'
+    r'(-?\d+(?:\.\d+)?)$'
+)
+
+
+def clear_line():
+    sys.stdout.write("\r" + " " * 120 + "\r")
+    sys.stdout.flush()
+
+
+def print_status():
+    with tele_lock:
+        t = tele.copy()
+    if current_cmd == "W":
+        pwm_l = pwm_r = DEFAULT_SPEED
+    elif current_cmd == "S":
+        pwm_l = pwm_r = -DEFAULT_SPEED
+    elif current_cmd == "A":
+        pwm_l, pwm_r = -DEFAULT_SPEED, DEFAULT_SPEED
+    elif current_cmd == "D":
+        pwm_l, pwm_r = DEFAULT_SPEED, -DEFAULT_SPEED
+    else:
+        pwm_l = pwm_r = 0
+
+    line = (
+        f"[{status_text:8}] PWM L:{pwm_l:4d} R:{pwm_r:4d} | "
+        f"RPM L:{t['rpmL']:6.1f} R:{t['rpmR']:6.1f} | "
+        f"x:{t['x']:7.3f} y:{t['y']:7.3f} θ:{t['theta']:7.1f}° | "
+        f"Ticks {t['ticksL']:6d}/{t['ticksR']:6d} | SPD={DEFAULT_SPEED}"
+    )
+    clear_line()
+    sys.stdout.write(line)
+    sys.stdout.flush()
+
+
+def parse_telemetry(line):
+    m = E_PATTERN.match(line.strip())
+    if not m:
+        return None
+    try:
+        return {
+            "ticksL": int(m.group(1)),
+            "ticksR": int(m.group(2)),
+            "rpmL":   float(m.group(3)),
+            "rpmR":   float(m.group(4)),
+            "x":      float(m.group(5)),
+            "y":      float(m.group(6)),
+            "theta":  float(m.group(7)),
+        }
+    except (ValueError, IndexError):
+        return None
+
+
+def read_from_esp(ser):
+    global tele
+    bad_count = 0
+    while is_running:
+        try:
+            if ser.in_waiting > 0:
+                raw = ser.readline().decode('utf-8', errors='ignore').strip()
+                if not raw or raw == "OK":
+                    continue
+                data = parse_telemetry(raw)
+                if data is not None:
+                    with tele_lock:
+                        tele.update(data)
+                    bad_count = 0
+                    print_status()
+                else:
+                    bad_count += 1
+                    if bad_count >= 25:
+                        try:
+                            ser.reset_input_buffer()
+                        except:
+                            pass
+                        bad_count = 0
+            else:
+                time.sleep(0.004)
+        except:
+            time.sleep(0.02)
+
+
+def keep_alive_sender(ser):
+    while is_running:
+        try:
+            with serial_lock:
+                if current_cmd:
+                    ser.write((current_cmd + "\n").encode())
+                    ser.flush()
+            time.sleep(0.03)   # 30ms – nhanh hơn
+        except:
+            break
+
+
+def send_command(cmd, label):
+    global current_cmd, status_text
+    current_cmd = cmd
+    status_text = label
+
+    try:
+        with serial_lock:
+            packet = (cmd + "\n").encode()
+            ser.write(packet)
+            ser.write(packet)
+            ser.write(packet)      # gửi 3 lần
+            ser.flush()
+    except Exception as e:
+        clear_line()
+        print(f"Lỗi gửi: {e}")
+
+    clear_line()
+    sys.stdout.write(f"→ {label}\n")
+    print_status()
+
+
+def change_speed(delta):
+    global DEFAULT_SPEED
+    DEFAULT_SPEED = max(MIN_SPEED, min(MAX_SPEED, DEFAULT_SPEED + delta))
+    cmd = "+" if delta > 0 else "-"
+    try:
+        with serial_lock:
+            ser.write((cmd + "\n").encode())
+            ser.flush()
+    except:
+        pass
+    clear_line()
+    sys.stdout.write(f"→ DEFAULT_SPEED = {DEFAULT_SPEED}\n")
+    print_status()
+
+
+def do_reset():
+    try:
+        with serial_lock:
+            ser.write(b"R\n")
+            ser.flush()
+    except:
+        pass
+    clear_line()
+    sys.stdout.write("→ RESET ODOMETRY\n")
+    print_status()
+
+
+def show_help():
+    clear_line()
+    sys.stdout.write(
+        "GIỮ W/S/A/D = tiến/lùi/trái/phải (nhả ra tự dừng) | "
+        "X dừng | R reset | +/- tốc độ | Q hoặc Ctrl+C thoát\n"
+    )
+    print_status()
+
+
+def keyboard_listener():
+    """
+    Đọc bàn phím ở chế độ raw (không cần Enter).
+    Khi giữ một phím di chuyển, terminal sẽ tự lặp lại ký tự đó (auto-repeat).
+    Nếu không thấy ký tự lặp lại trong HOLD_TIMEOUT giây -> coi như đã nhả
+    phím -> tự động gửi lệnh dừng.
+    """
+    global is_running
+
+    fd = sys.stdin.fileno()
+    old_settings = termios.tcgetattr(fd)
+
+    last_move_key = None
+    last_key_time = 0.0
+    repeat_seen = False   
+
+    try:
+        tty.setcbreak(fd)
+
+        while is_running:
+            ready, _, _ = select.select([sys.stdin], [], [], 0.03)
+            now = time.time()
+
+            if ready:
+                ch = sys.stdin.read(1)
+                if not ch:
+                    continue
+
+                if ch == '\x03':
+                    is_running = False
+                    break
+
+                k = ch.upper()
+
+                if k in MOVE_KEYS:
+                    if last_move_key != k:
+                        last_move_key = k
+                        repeat_seen = False
+                        send_command(k, MOVE_KEYS[k])
+                    else:
+                        repeat_seen = True
+                    last_key_time = now
+
+                elif k == 'X':
+                    last_move_key = None
+                    repeat_seen = False
+                    send_command('X', 'DỪNG')
+
+                elif k in ('+', '='):
+                    change_speed(+10)
+
+                elif k == '-':
+                    change_speed(-10)
+
+                elif k == 'R':
+                    do_reset()
+
+                elif k == 'H':
+                    show_help()
+
+                elif k == 'Q':
+                    is_running = False
+                    break
+
+            else:
+                if last_move_key is not None:
+                    threshold = STEADY_TIMEOUT if repeat_seen else INITIAL_GRACE
+                    if (now - last_key_time) > threshold:
+                        last_move_key = None
+                        repeat_seen = False
+                        send_command('X', 'DỪNG')
+
+    finally:
+        termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
+
+
+def main():
+    global is_running, ser
+
+    try:
+        ser = serial.Serial(PORT, BAUD_RATE, timeout=0.05)
+        time.sleep(0.15)
+        ser.reset_input_buffer()
+        print(f"[*] Đã kết nối ESP32 qua {PORT}")
+    except Exception as e:
+        print(f"[!] Không mở được {PORT}: {e}")
+        sys.exit(1)
+
+    t_read = threading.Thread(target=read_from_esp, args=(ser,), daemon=True)
+    t_read.start()
+    t_send = threading.Thread(target=keep_alive_sender, args=(ser,), daemon=True)
+    t_send.start()
+
+    print()
+    print("=" * 65)
+    print("  ĐIỀU KHIỂN ROBOT + ODOMETRY (giữ phím để di chuyển)")
+    print("=" * 65)
+    print("  GIỮ W / S / A / D : Tiến / Lùi / Xoay trái / Xoay phải")
+    print("                      (nhả phím ra sẽ tự dừng)")
+    print("  X                 : Dừng ngay")
+    print("  R                 : Reset odometry")
+    print("  + / -             : Tăng / giảm tốc độ")
+    print("  H                 : Hiện hướng dẫn")
+    print("  Q hoặc Ctrl+C     : Thoát")
+    print("=" * 65)
+    print(f"  DEFAULT_SPEED = {DEFAULT_SPEED}")
+    print()
+
+    try:
+        keyboard_listener()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        clear_line()
+        print("\n[*] Dừng khẩn cấp...")
+        is_running = False
+        try:
+            with serial_lock:
+                ser.write(b"X\n")
+                ser.flush()
+            time.sleep(0.1)
+            ser.close()
+        except:
+            pass
+        print("[*] Đã thoát.")
+
+
+if __name__ == '__main__':
+    main()
